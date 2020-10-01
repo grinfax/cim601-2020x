@@ -1,0 +1,123 @@
+body {
+    background: #efefef;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1 {
+    color: teal;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.wrapper {
+    background: #ffcc00;
+    max-width: 1000px;
+    margin: auto;
+    padding: 15px;
+}
+
+a {
+    color: red;
+}
+
+nav {
+    background: #666;
+    padding: 7px;
+    margin-left: -15px;
+    margin-top: -15px;
+    margin-right: -15px;
+}
+
+nav a {
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background: #000;
+    color: #fff;
+}
+
+.button {
+    background: blue;
+    color: #fff;
+    padding: 10px 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 20px;
+    box-shadow: rgba(109, 109, 109, 0.42) 2px 2px;
+    background-image: url(../img/ulogo.png);
+    background-position: 20px;
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+}
+
+.button:hover {
+    background: yellow;
+    color: green;
+    background-image: url(../img/qr.png);
+    background-position: 20px;
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+}
+
+/* Grid stuff */
+
+.container  {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    grid-template-rows:100px auto 100px;
+    grid-template-areas: 
+    "header header sidebar sidebar"
+    "main main sidebar sidebar"
+    "footer footer footer footer";
+}
+
+.grid-item {
+    padding: 10px;
+    font-size: 22px;
+}
+
+.grid-item-a {
+    grid-area: header;
+    background: green;
+}
+
+.grid-item-b {
+    grid-area: main;
+    background: orange;
+}
+
+.grid-item-c {
+    grid-area: sidebar;
+    background: pink;
+}
+
+.grid-item-d {
+    grid-area: footer;
+    background: yellow;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    /* your tyles here */
+    body {
+        background-color: lightblue;
+      }
+
+      .container  {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:100px auto 100px;
+        grid-template-areas: 
+        "header"
+        "main"
+        "sidebar"
+        "footer";
+    }
+    
+  }
+
+
